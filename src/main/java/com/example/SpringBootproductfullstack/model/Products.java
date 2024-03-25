@@ -3,7 +3,7 @@ package com.example.SpringBootproductfullstack.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="products")
+@Table(name="product")
 public class Products {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
