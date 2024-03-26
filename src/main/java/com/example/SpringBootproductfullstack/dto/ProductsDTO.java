@@ -19,6 +19,9 @@ public class ProductsDTO {
     private int price;
 
     private int quantity;
+     private float size;
+     private String colourway;
+     private String brand;
 
     public Integer getId() {
         return id;
@@ -66,5 +69,29 @@ public class ProductsDTO {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
+    public void setSize(float size) {
+        this.size = size;
+    }
+
+    public String getColourway() {
+        return colourway;
+    }
+
+    public void setColourway(String colourway) {
+        this.colourway = colourway;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }

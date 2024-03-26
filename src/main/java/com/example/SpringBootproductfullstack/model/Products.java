@@ -3,21 +3,42 @@ package com.example.SpringBootproductfullstack.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="product")
+@Table(name="products")
 public class Products {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
-    @Column
+    @Column(name="name")
     private String name;
-    @Column
+    @Column(name="description")
     private String description;
-    @Column
+    @Column(name="imagePath")
     private String imagePath;
-    @Column
+    @Column(name="price")
     private int price;
-    @Column
+    @Column(name="quantity")
     private int quantity;
+    @Column(name="size")
+    private float size;
+    @Column(name="colourway")
+    private String colourway;
+    @Column(name="brand")
+    private String brand;
+
+    public Products() {
+    }
+
+
+    public Products(String name, String description, String imagePath, int price, int quantity, float size, String colourway,String brand) {
+        this.name = name;
+        this.description = description;
+        this.imagePath = imagePath;
+        this.price = price;
+        this.quantity = quantity;
+        this.size = size;
+        this.colourway = colourway;
+        this.brand= brand;
+    }
 
     public Integer getId() {
         return id;
@@ -65,5 +86,29 @@ public class Products {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
+    public void setSize(float size) {
+        this.size = size;
+    }
+
+    public String getColourway() {
+        return colourway;
+    }
+
+    public void setColourway(String colourway) {
+        this.colourway = colourway;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }

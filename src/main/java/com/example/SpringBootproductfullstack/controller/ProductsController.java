@@ -71,6 +71,9 @@ public class ProductsController {
             products.setDescription(productsDTO.getDescription());
             products.setPrice(productsDTO.getPrice());
             products.setQuantity(productsDTO.getPrice());
+            products.setSize(productsDTO.getSize());
+            products.setColourway(productsDTO.getColourway());
+            products.setBrand(productsDTO.getBrand());
             productsService.save(products);
             return new ResponseEntity<>(products, HttpStatus.OK);
         } catch (Exception e) {
